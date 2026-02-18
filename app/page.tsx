@@ -1,16 +1,17 @@
-"use client";
-
-import TagArea from "@/components/tagarea";
-import SearchBar from "@/components/searchbar";
+import { Suspense } from "react";
+import RecipeView from "@/components/recipe-view";
+import { getRecipes } from "@/data/utils";
 
 export default function Home() {
-  return (
-    <div className="">
-      <SearchBar className="w-full" onChange={(value) => { console.log(value) }} />
+  const recipes = getRecipes();
 
-      <TagArea className="w-full"
-        tags={["Banana", "Apple", "Orange", "Grape", "Strawberry", "Banana", "Apple", "Orange", "Grape", "Strawberry", "Banana", "Apple", "Orange", "Grape", "Strawberry", "Banana", "Apple", "Orange", "Grape", "Strawberry"]}
-        onSelectionChange={(tags) => { console.log(tags) }} />
+  return (
+    <div className="p-4">
+      <Suspense fallback={<div className="text-center">Loading recipes...</div>}>
+        {recipes.then(recipes => (
+          <RecipeView recipes={recipes} />
+        ))}
+      </Suspense>
     </div>
   );
 }
