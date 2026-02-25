@@ -9,7 +9,7 @@ export default function AppHeader() {
     console.log(theme);
 
     return (
-        <header className="relative w-full h-44 md:h-80 flex items-center justify-center overflow-hidden">
+        <header className="relative w-full h-60 md:h-80 flex items-center justify-center overflow-hidden">
             <Image
                 src='/background.jpg'
                 alt="A table full of spices"

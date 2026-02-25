@@ -23,7 +23,8 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
                 </div>
                 <div className="flex justify-between items-center w-full mt-2">
                     <p className="text-xl text-gray-900 font-semibold dark:text-white">{recipe.rating}<span className="text-gray-600 font-normal text-[70%] dark:text-gray-300">/5</span></p>
-                    <button type="button" className="bg-amber-600 hover:bg-amber-700 cursor-pointer px-6 py-2 active:px-5 active:py-1 font-medium rounded-md text-white text-sm dark:bg-amber-700 dark:hover:bg-amber-600 transition-all duration-200">
+                    <button type="button" onClick={() => alert(`${recipe.name} - Coming soon!`)}
+                        className="bg-amber-600 hover:bg-amber-700 cursor-pointer px-6 py-2 active:px-5 active:mr-1 font-medium rounded-md text-white text-sm dark:bg-amber-700 dark:hover:bg-amber-600 transition-all duration-200">
                         Read
                     </button>
                 </div>
