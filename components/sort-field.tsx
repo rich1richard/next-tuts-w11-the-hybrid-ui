@@ -52,8 +52,8 @@ export default function SortField({ sortData, onChange, className }: SortFieldPr
     return (
         <div ref={sortFieldRef} className="relative z-10 text-gray-600 dark:text-gray-200">
             <div className={`${className} flex items-center gap-3`}>
-                <div className="cursor-pointer flex items-center bg-gray-200 border border-gray-300 dark:bg-gray-600 dark:border-gray-600 py-1 px-2 gap-3 rounded-md" onClick={() => setShowSort((prev) => !prev)}>
-                    <span >{sortData.find((item) => item.id === sortField)?.display}</span>
+                <div className="cursor-pointer flex items-center bg-gray-200 border border-gray-300 dark:bg-gray-600 dark:border-gray-600 py-1 px-2 gap-3 rounded-md w-24" onClick={() => setShowSort((prev) => !prev)}>
+                    <span className="w-full" >{sortData.find((item) => item.id === sortField)?.display}</span>
 
                     <svg xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24"
@@ -74,10 +74,10 @@ export default function SortField({ sortData, onChange, className }: SortFieldPr
                 }</button>
             </div>
 
-            <div className={showSort ? "absolute top-10 right-0 bg-gray-200 border border-gray-300 dark:bg-gray-600 dark:border-gray-600 rounded-md shadow-lg overflow-hidden" : "hidden"}>
+            <div className={showSort ? "absolute top-10 right-0 bg-gray-200 border border-gray-300 dark:bg-gray-700 dark:border-gray-500 rounded-md shadow-lg overflow-hidden" : "hidden"}>
                 {sortData.map((item) => (
                     <button key={item.id} type="button" onClick={() => handleSortChange(item.id)}
-                        className="w-full text-left cursor-pointer py-2 px-2 hover:bg-gray-300 transition-colors duration-200">{item.display}</button>
+                        className="w-full text-left cursor-pointer py-2 px-2 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 text-gray-900 dark:text-gray-100">{item.display}</button>
                 ))}
             </div>
         </div>
