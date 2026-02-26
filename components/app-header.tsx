@@ -17,15 +17,15 @@ export default function AppHeader() {
                 className="object-cover inset-0 -z-15 blur-xs"
             />
 
-            <div className="absolute inset-0 -z-10 bg-gray-100/40"></div>
+            <div className="absolute inset-0 -z-10 bg-orange-50/30 dark:bg-black/40 backdrop-brightness-75 transition-colors duration-500"></div>
 
-            <Image src='/logo-nobg.png' alt="Logo" className="md:hidden" width={150} height={150} />
-            <Image src='/logo-nobg.png' alt="Logo" className="hidden md:block" width={200} height={200} />
+            <Image src='/logo-nobg.png' alt="Logo" className="md:hidden drop-shadow-lg" width={150} height={150} />
+            <Image src='/logo-nobg.png' alt="Logo" className="hidden md:block drop-shadow-lg" width={200} height={200} />
 
-            <label className="absolute top-5 right-5 inline-flex items-center cursor-pointer text-gray-900 gap-3">
+            <label className="absolute top-5 right-5 inline-flex items-center cursor-pointer text-primary-foreground gap-3">
                 <input type="checkbox" className="sr-only peer" checked={theme == "dark" ? false : true} onChange={() => setTheme(theme == "light" ? "dark" : "light")} />
-                <div className="w-12 h-6 bg-gray-900 rounded-full peer peer-checked:bg-slate-300 transition-colors duration-200"></div>
-                <span className="flex items-center justify-center dot absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-6">{
+                <div className="w-12 h-6 bg-primary dark:bg-muted rounded-full peer transition-colors duration-200 shadow-inner"></div>
+                <span className="flex items-center justify-center dot absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-6 shadow-md shadow-black/20 text-primary dark:text-muted-foreground">{
                     theme == "dark" ?
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">

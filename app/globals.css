@@ -3,20 +3,42 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #e1e1e1;
-  --foreground: #171717;
+  --background: #fdf8f1;
+  --foreground: #451a03;
+  --card: #ffffff;
+  --card-foreground: #451a03;
+  --primary: #d97706;
+  --primary-foreground: #fffbeb;
+  --muted: #f3e8d2;
+  --muted-foreground: #92400e;
+  --border: #e7cca4;
   color-scheme: light;
 }
 
 .dark {
-  --background: #171717;
-  --foreground: #e1e1e1;
+  --background: #1a0f0a;
+  --foreground: #fef3c7;
+  --card: #2a1b15;
+  --card-foreground: #fef3c7;
+  --primary: #f59e0b;
+  --primary-foreground: #451a03;
+  --muted: #3d261c;
+  --muted-foreground: #d97706;
+  --border: #4d342a;
   color-scheme: dark;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
