@@ -11,7 +11,7 @@ export default function Home() {
         fallback={
           <div className="flex flex-col items-center justify-center min-h-[250px] w-full">
             <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary mb-6" />
-            <p className="text-primary animate-bounce">Loading recipes...</p>
+            <p className="text-primary italic font-serif animate-bounce">Loading recipes...</p>
           </div>
         }
       >

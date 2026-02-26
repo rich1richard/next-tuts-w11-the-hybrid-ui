@@ -63,7 +63,7 @@ export default function SortField({ sortData, onChange, className }: SortFieldPr
                         strokeWidth="3"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className={`transition-transform duration-300 ${showSort ? 'rotate-0' : 'rotate-180'} text-primary`}>
+                        className={`transition-transform duration-300 ${showSort ? 'rotate-0' : '-rotate-90'} text-primary`}>
                         <path d="m6 9 6 6 6-6" />
                     </svg>
                 </div>
