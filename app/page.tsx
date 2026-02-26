@@ -7,7 +7,14 @@ export default function Home() {
 
   return (
     <div className="p-4">
-      <Suspense fallback={<div className="text-center">Loading recipes...</div>}>
+      <Suspense
+        fallback={
+          <div className="flex flex-col items-center justify-center min-h-[250px] w-full">
+            <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary mb-6" />
+            <p className="text-primary animate-bounce">Loading recipes...</p>
+          </div>
+        }
+      >
         {recipes.then(recipes => (
           <RecipeView recipes={recipes} />
         ))}

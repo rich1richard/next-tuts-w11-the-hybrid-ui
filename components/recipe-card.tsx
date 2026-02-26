@@ -3,9 +3,10 @@ import Image from 'next/image';
 
 interface RecipeCardProps {
     recipe: Recipe;
+    onRead: () => void;
 }
 
-export default function RecipeCard({ recipe }: RecipeCardProps) {
+export default function RecipeCard({ recipe, onRead }: RecipeCardProps) {
     return (
         <div className="group bg-card border border-border/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 rounded-xl overflow-hidden shadow-sm shadow-black/5">
             <div className="relative w-full h-36 overflow-hidden">
@@ -23,7 +24,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
                 </div>
                 <div className="flex justify-between items-center w-full mt-2">
                     <p className="text-xl text-primary font-bold">{recipe.rating}<span className="text-muted-foreground font-normal text-[60%] ml-0.5">/ 5</span></p>
-                    <button type="button" onClick={() => alert(`${recipe.name} - Coming soon!`)}
+                    <button type="button" onClick={onRead}
                         className="bg-primary hover:bg-primary/90 cursor-pointer px-5 py-2 active:scale-95 font-bold rounded-lg text-primary-foreground text-xs transition-all duration-200 shadow-sm shadow-primary/20">
                         Read
                     </button>

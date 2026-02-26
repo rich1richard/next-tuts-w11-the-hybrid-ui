@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Recipe } from "@/data/models";
 import { recipeHasKeywords } from "@/data/utils";
 import SortField from "./sort-field";
+import RecipeModal from "./recipe-modal";
 
 interface RecipeViewProps {
     recipes: Recipe[];
@@ -40,6 +41,7 @@ export default function RecipeView({ recipes }: RecipeViewProps) {
     const [keywords, setKeywords] = useState('');
     const [sortId, setSortId] = useState(sortOptions[0].id);
     const [ascending, setAscending] = useState(true);
+    const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
 
     const displayedRecipes = sortRecipe(sortId, ascending, recipes.filter(
         recipe => recipeHasKeywords(recipe, keywords.split(" "))));
@@ -56,9 +58,13 @@ export default function RecipeView({ recipes }: RecipeViewProps) {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {displayedRecipes.map((recipe) => (
-                    <RecipeCard key={recipe.id} recipe={recipe} />
+                    <RecipeCard key={recipe.id} recipe={recipe} onRead={() => setSelectedRecipe(recipe)} />
                 ))}
             </div>
+
+            {selectedRecipe && (
+                <RecipeModal recipe={selectedRecipe} onClose={() => setSelectedRecipe(null)} />
+            )}
         </div>
     );
 }
