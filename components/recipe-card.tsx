@@ -10,7 +10,7 @@ export default function RecipeCard({ recipe, onRead }: RecipeCardProps) {
     return (
         <div className="group bg-card border border-border/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 rounded-xl overflow-hidden shadow-sm shadow-black/5">
             <div className="relative w-full h-36 overflow-hidden">
-                <Image className="max-h-40 w-full object-cover group-hover:scale-105 transition-transform duration-500" src={recipe.image} alt={recipe.name} fill />
+                <Image className="object-cover group-hover:scale-105 transition-transform duration-500" src={recipe.image} alt={recipe.name} fill />
                 <div className={`absolute top-2 right-2 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase text-white shadow-sm
                     ${recipe.difficulty === "Easy" ? "bg-emerald-500/80" : recipe.difficulty === "Medium" ? "bg-amber-500/80" : "bg-rose-500/80"}`}>{recipe.difficulty}</div>
             </div>

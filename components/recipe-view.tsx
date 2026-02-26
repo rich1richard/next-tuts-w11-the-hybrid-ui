@@ -48,7 +48,7 @@ export default function RecipeView({ recipes }: RecipeViewProps) {
 
     return (
         <div className="w-full lg:w-250 mx-auto">
-            <SearchBar className="w-full my-6" onChange={(value) => setKeywords(value)} />
+            <SearchBar className="my-6" onChange={(value) => setKeywords(value)} />
 
             <div className="flex justify-between items-center text-muted-foreground text-xs font-bold uppercase tracking-widest py-4 border-b border-border/30 mb-4">
                 <p>{displayedRecipes.length} recipe{displayedRecipes.length !== 1 ? "s" : ""} found</p>

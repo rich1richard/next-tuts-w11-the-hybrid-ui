@@ -43,7 +43,7 @@ export default function RecipeModal({ recipe, onClose }: RecipeModalProps) {
 
             {/* Modal Content */}
             <div
-                className={`relative bg-card border border-border/50 w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-xl shadow-2xl transition-all duration-500 transform ${isMounted ? "scale-100 translate-y-0" : "scale-95 translate-y-8"
+                className={`relative bg-card border border-border/50 w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-xl shadow-2xl transition-all duration-500 ${isMounted ? "scale-100 translate-y-0" : "scale-95 translate-y-8"
                     }`}
             >
                 {/* Close Button */}
@@ -76,7 +76,7 @@ export default function RecipeModal({ recipe, onClose }: RecipeModalProps) {
                     </div>
 
                     {/* Details Section */}
-                    <div className="flex-1 p-3 md:p-6 py-8! max-h-[50vh] md:max-h-[70vh] overflow-y-auto bg-card">
+                    <div className="flex-1 p-3 md:p-6 py-8 max-h-[50vh] md:max-h-[70vh] overflow-y-auto bg-card">
                         {/* Quick Stats */}
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                             <div className="bg-primary/5 p-3 rounded-2xl border border-primary/10 flex flex-col items-center">

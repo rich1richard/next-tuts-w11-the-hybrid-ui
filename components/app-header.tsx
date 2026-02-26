@@ -14,7 +14,7 @@ export default function AppHeader() {
                 src='/background.jpg'
                 alt="A table full of spices"
                 fill
-                className="object-cover inset-0 -z-15 blur-xs"
+                className="object-cover -z-15 blur-xs"
             />
 
             <div className="absolute inset-0 -z-10 bg-orange-50/30 dark:bg-black/40 backdrop-brightness-75 transition-colors duration-500"></div>
