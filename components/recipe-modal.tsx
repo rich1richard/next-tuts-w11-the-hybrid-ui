@@ -76,7 +76,7 @@ export default function RecipeModal({ recipe, onClose }: RecipeModalProps) {
                     </div>
 
                     {/* Details Section */}
-                    <div className="flex-1 p-3 md:p-6 py-8 max-h-[50vh] md:max-h-[70vh] overflow-y-auto bg-card">
+                    <div className="flex-1 p-8 max-h-[50vh] md:max-h-[70vh] overflow-y-auto bg-card">
                         {/* Quick Stats */}
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                             <div className="bg-primary/5 p-3 rounded-2xl border border-primary/10 flex flex-col items-center">

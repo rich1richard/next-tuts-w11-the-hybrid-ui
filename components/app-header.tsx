@@ -6,8 +6,6 @@ import Image from "next/image";
 export default function AppHeader() {
     const { theme, setTheme } = useTheme();
 
-    console.log(theme);
-
     return (
         <header className="relative w-full h-60 md:h-80 flex items-center justify-center overflow-hidden">
             <Image
